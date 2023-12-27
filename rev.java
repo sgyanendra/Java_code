@@ -1,12 +1,19 @@
 class rev{
-    public static void main(String agrg[]){
-        int rev=0,r,n=10899,i;
-
-        while(n!=0){
-         r=n%10;
-         n=n/10;
-         rev=rev*10+r;
-        }
-        System.out.println("reverse:"+rev);
+    public static void reverse(int arr[]){
+    int temp,first=0,last=arr.length-1;
+         while(first<last){
+           temp=arr[last];
+           arr[last]=arr[first];
+           arr[first]=temp;
+           first++;
+           last--;
+         }
+   }
+    public static void main(String arg[]){
+    int arr[]={1,2,3,4,5,6};
+    reverse(arr);
+    for(int i=0;i<arr.length;i++){
+      System.out.print(arr[i]);
+    }
     }
 }
