@@ -7,16 +7,17 @@ class spiral{
         int endRow=num.length-1;
         int endCol=num.length-1;
 
-        for(int i=startRow;i<=endRow;i++){
-          System.out.print(num[i][startCol]+" ");
-        }
-        for(int i=startCol+1;i<=endCol;i++){
+        for(int i=startCol;i<=endCol;i++){
           System.out.print(num[startRow][i]+" ");
         }
-        for(int i=endCol-1;i>=startCol;i--){
+        for(int i=startRow+1;i<=endRow;i++){
+          System.out.print(num[i][startCol]+" ");
+        }
+        
+        for(int i=startCol+1; i<=endCol;i++){
           System.out.print(num[endRow][i]+" ");
         }
-         for(int i=endRow-1;i>=startRow+1;i--){
+        for(int i=startRow+1;i<=endCol-1;i++){
           System.out.print(num[i][startCol]+" ");
         }
         startRow++;
