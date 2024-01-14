@@ -15,7 +15,7 @@ class findNumber{
         //System.out.println(st2);
     }
     public static void main(String arg[]){
-      String st="aaabbcd";
+      String st="aaabvvvvbcd";
       find(st);
     }
 }
