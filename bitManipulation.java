@@ -30,6 +30,12 @@ class bitManipulation{
         int b=(~(1<<i));
         return (n&b);
      }
+
+     public static int updateIthBit(int n,int i,int bit){
+        n=clearIthBit(n,i);
+        int b=bit<<i;
+        return n|b;
+     }
     public static void main(String arg[]){
      Scanner sc=new Scanner(System.in);
     System.out.println("Enter the Number!!");
@@ -45,5 +51,7 @@ class bitManipulation{
         System.out.println("getIthBit: "+getIthbit(n,i));
          System.out.println("getIthBit: "+setIthbit(n,i));
          System.out.println("clearIthBit: "+clearIthBit(n,i));
+
+         System.out.println("updateIthBit: "+updateIthBit(n,i,1));
     }
 }
