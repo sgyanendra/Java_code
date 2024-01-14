@@ -1,22 +1,18 @@
 class findNumber{
 
     public static void find(String st){
-        int f=1;
         for(int i=0;i<st.length();i++){
-            if(i==0){
-              System.out.print(st.charAt(0));
+            Integer f=1;
+            while(i<st.length()-1 && st.charAt(i)==st.charAt(i+1)){
+              f++;
+              i++;
             }
-            else if(st.charAt(i)==st.charAt(i-1)){
-               f++;
-           }
-          else if(f!=1){
-                 System.out.print(f);
-                 f=1;
-            }
-            else{
-                System.out.print(st.charAt(i));
+            System.out.print(st.charAt(i));
+            if(f>1){
+                System.out.print(f);
             }
         }
+        //System.out.println(st2);
     }
     public static void main(String arg[]){
       String st="aaabbcd";
