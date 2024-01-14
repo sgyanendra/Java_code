@@ -8,12 +8,11 @@ class findNumber{
             }
             else if(st.charAt(i)==st.charAt(i-1)){
                f++;
-               i++;
            }
-          /* else if(f!=1){
+          else if(f!=1){
                  System.out.print(f);
                  f=1;
-               }*/
+            }
             else{
                 System.out.print(st.charAt(i));
             }
